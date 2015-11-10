@@ -1,0 +1,37 @@
+include ../helpers/_mixins
+
+doctype html
+
+<!--[if lt IE 8]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9" lang="">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10" lang="">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+html.no-js(lang='')<!--<![endif]-->
+  include ../../_head
+  body
+    #wrapper
+      // Page Content
+      #page-content-wrapper
+        // inner Header
+        include ../blocks/_header
+        // end inner Header
+
+        // main-content
+        main.main-content
+          block content
+        // end main-content
+
+      // inner Header
+      include ../blocks/_footer
+      // end inner Header
+
+      // #page-content-wrapper
+    // #wrapper
+
+    block modals

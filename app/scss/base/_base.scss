@@ -1,0 +1,53 @@
+// ==========================================================================
+//    Author's custom styles
+// ==========================================================================
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: $screen-sm;
+    margin: 0 auto;
+    background: #fff;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    max-width: (1140px + $grid-gutter-width);
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.clearfix:before,
+.clearfix:after
+{
+    display: table;
+
+    content: ' ';
+}
+.clearfix:after
+{
+    clear: both;
+}
+// 
+// For IE 6/7 only
+// Include this rule to trigger hasLayout and contain floats.
+// 
+.clearfix
+{
+    overflow: initial;
+    *zoom: 1;
+}
