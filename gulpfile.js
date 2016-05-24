@@ -9,10 +9,10 @@ var     uglify          = require('gulp-uglify');
 var     notify          = require('gulp-notify');
 var     del             = require('del');
 var     useref          = require('gulp-useref');
-var     sass            = require('gulp-sass');
+// var     sass            = require('gulp-sass');
 var     compass         = require('gulp-compass');
 var     csso            = require('gulp-csso');
-var     minifyCSS       = require('gulp-minify-css');
+var     cssnano       = require('gulp-cssnano');
 var     jadeInheritance = require('gulp-jade-inheritance');
 var     jade            = require('gulp-jade');
 var     changed         = require('gulp-changed');
@@ -65,7 +65,7 @@ gulp.task('build', ['copym', 'copyico', 'fonts'], function () {
     return gulp.src('app/*.html')
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', minifyCSS()))
+        .pipe(gulpif('*.css', cssnano()))
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(gulp.dest('dist'));

@@ -10,11 +10,10 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "fontawesome": "~4.4.*",
+    "bootstrap-sass": "~3.3.*",
+    "fontawesome": "~4.6.*",
     "jquery": "~1.*",
-    "modernizr": "~2.*",
-    "normalize.css": "~3.0.*"
+    "modernizr": "~2.*"
   },
   "devDependencies": {
     "respond": "~1.4.2"
